@@ -1,10 +1,11 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import './Organise.css';
+import history from '../history';
+import MintTickets from "./MintTickets";
+
 
 export default function Organise() {
-
-
 
     function submitEventHandler(data){
         console.log("Input Data: ", data)
@@ -22,6 +23,10 @@ export default function Organise() {
 
 
         console.log("Form Data Object Is: ", formData);
+        console.log("Save the Event Data at backend and then navigate to next Screen.");
+
+        
+        history.push('/MintTickets', MintTickets);
     }
 
 
