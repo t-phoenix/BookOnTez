@@ -57,4 +57,13 @@ Event Related Data is stored in a simple MongoDb, while Ticket related data is s
 IPFS - InterPlanetaryFileSystem is used through Pinata Sdk for ease of storing metadata related to NFT tickets, while a smart contract is deployed on Tezos blockchain to mint, delegate and transfer those tickets.
 
 
+___
 
+
+## A small Demo Video to understand the project
+[![demo-video]()](https://youtu.be/jLyjyS7aLZ4)
+
+
+---
+I am a mobile App Developer, starting with web development, thus developing smart contract for the same is taking longer than expected.
+If you like the idea and want to contribute, feel free to contact me @abhinil.agarwal@iiitb.org
