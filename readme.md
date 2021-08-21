@@ -35,6 +35,7 @@ This is necessary as minting Event Tickets in a large number as NFT can be a hug
 The working of this application can be understood by the diagram given below.
 
 
+![architecture-diagram](https://github.com/t-phoenix/BookOnTez/blob/master/assets/Figure1.png)
 
 
 
