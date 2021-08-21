@@ -1,7 +1,7 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Col, Row, Form } from "react-bootstrap";
 import './TicketForm.css'
-
+import '../Organise/Organise.css'
 
 export default function TicketForm(props) {
 
@@ -14,16 +14,18 @@ export default function TicketForm(props) {
                 <input type="text" onchange={props.ticketType}/>
             </div>
         </div> */}
-
-    <Form title="formStyling">
+    <Col style = {{width: '300px'}}>
+    <Form className="formStyling">
+      <Row>
       <Form.Group className="title" controlId="ticketType">
         <Form.Label>Type of Ticket: </Form.Label>
         <Form.Control type="text" placeholder="Eg: Gold, Silver, Bronze" />
       </Form.Group>
+      </Row>
 
-      <Form.Group className="title" controlId="ticketColour">
-        <Form.Label>Ticket Colour: </Form.Label>
-        <Form.Control type="color" />
+      <Form.Group className="title" controlId="ticketColour" >
+        <Form.Label style={{width:"130px"}}>Ticket Colour: </Form.Label >
+        <Form.Control type="color" style={{width:"50px", height:"30px"}}/>
       </Form.Group>
 
       <Form.Group className="title" controlId="ticketImage">
@@ -41,6 +43,7 @@ export default function TicketForm(props) {
         <Form.Control type="text" placeholder="minimum 1tz" />
       </Form.Group>
     </Form>
+    </Col>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Form, Button , Dropdown, DropdownButton, ToggleButtonGroup, ToggleButton} from "react-bootstrap";
+import { Form, Button , Dropdown, DropdownButton, ToggleButtonGroup, ToggleButton, Row, Col} from "react-bootstrap";
 import TicketForm from "../components/TicketForm"
 
 export default function MintTickets(){
@@ -30,16 +30,16 @@ export default function MintTickets(){
 
     return(
         <div>
-            <div>
+            {/* <div>
                 <h1>Ticket Minting Screen</h1>
                 <li>We are trying to capture all the information oF Tickets here.</li>
-            </div>
+            </div> */}
             <div>
+              <Col>
+                <Row style={{marginInline:"20px", marginTop:"20px"}}>
                 <h6>Types of Tickets: </h6>
-                {/* <input type="text" onchange={handleNumberOfTicketInput}/>
-                <Button onclick={handleTicketTypes}>Next</Button> */}
 
-                <ToggleButtonGroup type="radio" name="options" value={numberOfTicketTypes} onChange={handleNumberOfTicketInput}>
+                <ToggleButtonGroup type="radio" name="options" value={numberOfTicketTypes} onChange={handleNumberOfTicketInput} style={{width:"30%"}}>
                   <ToggleButton id="tbg-radio-1" value={1}>
                     Option 1
                   </ToggleButton>
@@ -50,24 +50,41 @@ export default function MintTickets(){
                     Option 3
                   </ToggleButton>
                 </ToggleButtonGroup>
+                </Row>
 
+              <Row style={{marginInline:'10px'}}>
                 {numberOfTicketTypes===1?
                 <TicketForm/>
                 :(numberOfTicketTypes===2?
-                    <div>
-                    <TicketForm/>
-                    <TicketForm/>
-                    </div>
+                    <Row>
+                      <Col>
+                        <TicketForm/>
+                      </Col>
+                      <Col>
+                        <TicketForm/>
+                      </Col>
+                    </Row>
                 :<div>
-                <TicketForm/>
-                <TicketForm/>
-                <TicketForm/>
+                  <Row>
+                    <Col>
+                      <TicketForm/>
+                    </Col>
+                    <Col>
+                      <TicketForm/>
+                    </Col>
+                    <Col>
+                      <TicketForm/>
+                    </Col>
+                  </Row>
                 </div>)
                 }
+                </Row>
 
-
-                <Button onClick={handleMintTickets}>Mint</Button>
-
+                <Row style={{justifyContent: 'center'}}>
+                  <Button onClick={handleMintTickets} style={{width:'60px'}} >Mint</Button>
+                </Row>
+                  
+                </Col>
             </div>
         </div>
     )

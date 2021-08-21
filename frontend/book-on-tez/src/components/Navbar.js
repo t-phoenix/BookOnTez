@@ -51,7 +51,8 @@ export default function Navigation (props){
             return activeAccount;
         }else{
             console.log("NOT CONNECTED.");
-            connectWallet();
+            return
+            // connectWallet();
         }
 
     }
@@ -89,21 +90,26 @@ export default function Navigation (props){
         <>
         <Navbar bg="dark" variant="dark" expand="lg" >
             <Container className="nav-styling">
-                <Container>
-                    <Nav className="me-auto">
+                <Container className="nav-area">
+                    <Nav >
                         <Navbar.Brand href="/" className="brand-style">BookOnTez</Navbar.Brand>
                         <Nav.Link href="/Discover" className="nav-button">Discover</Nav.Link>
                         <Nav.Link href="/Organise" className="nav-button">Organise</Nav.Link>
                     </Nav>
                 </Container>
-                <Container>
+
+                <Container style={{width:'40%'}}>
+
+                </Container>
+                
+                <Container className="user-area">
                     <Button className="connect-button" onClick={connectWallet}>
                         Connect
                     </Button>
                     <Button className="connect-button" onClick={disconnectWallet}>
                         Disconnect
                     </Button>
-                    <h6>Address: {userAddress}</h6>
+                    <h6 style={{color:"white", width:'300px'}}>Address: {userAddress}</h6>
                 </Container>
             </Container>
 
